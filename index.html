@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>線上考卷 - SOCS_S-M ratio-2</title>
+    <title>線上考卷</title>
     <link id="theme-css" rel="stylesheet" href="styles.css">
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdnjs.cloudflare.com;">
 </head>
 <body>
     <div class="container">
-      <h1>SOCS_S-M ratio-2</h1>
+      <!-- 題目選單 -->
+      <div class="field" style="text-align: center; margin-bottom: 2rem;">
+        <label for="exam-title">題目選單 ：</label>
+        <select id="exam-title" style="font-size: 1.2rem; font-weight: bold;">
+          <option value="Typing Practice">Typing Practice</option>
+          <option value="SOCS_S-M ratio">SOCS_S-M ratio</option>
+          <option value="SOCS_S-M ratio-2">SOCS_S-M ratio-2</option>
+        </select>
+      </div>
+      <h1 id="exam-title-display">SOCS_S-M ratio-2</h1>
 
       <!-- 班級（下拉 + 可輸入 other） -->
       <div class="field">
@@ -19,9 +28,7 @@
             <option value="">請選擇班級 Select your class</option>
             <option value="financial">中央財金 NCUFN</option>
             <option value="economic">中央經濟 NCUEC</option>
-            <option value="other">其他 OTHER</option>
           </select>
-          <input type="text" id="cls-other" class="hidden" placeholder="請輸入班級 Enter your class">
         </div>
       </div>
       <div class="field">
@@ -154,7 +161,6 @@
 
 
     <!-- 將所有 script 放在 body 底部以確保 DOM 完全載入 -->
-  <!-- 已移除 DOCX 相關 script -->
     <script src="scripts.js"></script>
     <script>
         // cache-bust 每次載入（部署後可改為版本號或檔名策略）
