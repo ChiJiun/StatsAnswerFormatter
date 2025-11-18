@@ -1,3 +1,5 @@
+import { loadSelectedPDF } from "./pdf.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const examId = document.title.replace(/[^\w]/g, "_");
   const clsInp = document.getElementById("cls");
@@ -104,6 +106,14 @@ document.addEventListener("DOMContentLoaded", () => {
   updateClsOtherVisibility();
   updateExamTitleVisibility();
 
+  // 初始化載入當前選項的 PDF
+  loadSelectedPDF(examTitleSelect.value);
+
+  // 綁定題目選單變更事件，自動載入對應 PDF
+  examTitleSelect.addEventListener("change", (e) => {
+    loadSelectedPDF(e.target.value);
+  });
+
   // 綁定事件（包含 clsOther 和 exam-title）
   [
     clsInp,
@@ -186,3 +196,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === modal) modal.style.display = "none";
   });
 });
+
+// 檢查 PDF.js 是否載入
+if (typeof pdfjsLib === "undefined") {
+  console.error("PDF.js 沒有載入，請檢查網路連線或 script 標籤。");
+}
