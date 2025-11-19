@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>線上考卷</title>
     <link id="theme-css" rel="stylesheet" href="styles.css">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdnjs.cloudflare.com; worker-src 'self' blob:;">
-    <!-- 添加 PDF.js 庫 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdnjs.cloudflare.com;">    
 </head>
 <body>
     <div class="container">
@@ -21,13 +19,15 @@
           <option value="SOCS_S-M ratio-2">SOCS_S-M ratio-2</option>
           <option value="SOCS_Midterm">SOCS_Midterm</option>
           <option value="Four-Step_Simulation of random guessing">Four-Step_Simulation of random guessing</option>
+          <option value="Four-Step_Proportion_App or in-store">Four-Step_Proportion_App or in-store</option>
         </select>
       </div>
 
       <!-- PDF 顯示區域 -->
-      <div class="pdf-viewer" style="margin-bottom: 2rem; border: 1px solid #ccc; padding: 1rem; max-height: 600px; overflow-y: auto;">
-        <div id="pdf-status">請選擇題目以載入 PDF</div>
-      </div>
+      <div class="pdf-viewer" style="margin-bottom: 2rem; border: 1px solid #ccc; padding: 1rem;">
+  <div id="pdf-status">請選擇題目以載入 PDF Please select a question to load PDF</div>
+  <iframe id="pdf-iframe" style="width: 100%; height: 600px; border: none; display: none;"></iframe>
+</div>
 
       <!-- 班級（下拉 + 可輸入 other） -->
       <div class="field">
