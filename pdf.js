@@ -6,75 +6,27 @@ const pdfMapping = {
   SOCS_Midterm: "questions/SOCS_S-M_ratio.pdf",
   "Four-Step_Simulation of random guessing":
     "questions/Four-Step_Simulation.pdf",
+  "Four-Step_Proportion_App or in-store": "questions/Four-Step_Proportion.pdf",
 };
 
-// PDF 載入和渲染函數（支援多頁滑動）
-async function loadPDF(pdfPath) {
-  const statusDiv = document.getElementById("pdf-status");
-  const pdfViewer = document.querySelector(".pdf-viewer");
-
-  statusDiv.innerHTML = "載入中...<br>Loading...";
-
-  try {
-    // 載入 PDF 文檔
-    const pdf = await pdfjsLib.getDocument(pdfPath).promise;
-    const numPages = pdf.numPages;
-
-    // 清空之前的內容
-    const existingCanvases = pdfViewer.querySelectorAll("canvas");
-    existingCanvases.forEach((canvas) => canvas.remove());
-
-    // 設定縮放比例
-    const scale = 1.5;
-
-    // 渲染每一頁
-    for (let pageNum = 1; pageNum <= numPages; pageNum++) {
-      const page = await pdf.getPage(pageNum);
-      const viewport = page.getViewport({ scale });
-
-      // 建立新的 canvas
-      const canvas = document.createElement("canvas");
-      const ctx = canvas.getContext("2d");
-
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
-      canvas.style.display = "block"; // 確保垂直堆疊
-      canvas.style.marginBottom = "10px"; // 頁面間距
-
-      // 渲染頁面到 canvas
-      const renderContext = {
-        canvasContext: ctx,
-        viewport: viewport,
-      };
-
-      await page.render(renderContext).promise;
-
-      // 添加到 pdf-viewer
-      pdfViewer.appendChild(canvas);
-    }
-
-    statusDiv.innerHTML = `載入完成，共 ${numPages} 頁<br>Loaded, ${numPages} pages`;
-  } catch (error) {
-    console.error("PDF 載入失敗:", error);
-    statusDiv.innerHTML =
-      "載入失敗: PDF 文件不存在或無法載入<br>Load failed: PDF not found or unable to load";
-  }
-}
-
-// 根據選單載入 PDF
+// 根據選單載入 PDF（使用 iframe）
 function loadSelectedPDF(selectedExam) {
   const pdfPath = pdfMapping[selectedExam];
-  const pdfViewer = document.querySelector(".pdf-viewer");
+  const iframe = document.getElementById("pdf-iframe");
+  const statusDiv = document.getElementById("pdf-status");
 
   if (pdfPath) {
-    loadPDF(pdfPath);
+    iframe.src = pdfPath;
+    iframe.style.display = "block";
+    statusDiv.innerHTML = "載入中...<br>Loading..."; // 使用 innerHTML 和 <br> 讓中英文分兩行
+    // 當 iframe 載入完成時更新狀態
+    iframe.onload = () => {
+      statusDiv.innerHTML = "載入完成<br>Loaded"; // 同上
+    };
   } else {
-    // 清空之前的 PDF 內容
-    const existingCanvases = pdfViewer.querySelectorAll("canvas");
-    existingCanvases.forEach((canvas) => canvas.remove());
-
-    document.getElementById("pdf-status").innerHTML =
-      "請選擇題目以載入 PDF<br>Please select a question to load PDF";
+    iframe.style.display = "none";
+    statusDiv.innerHTML =
+      "請選擇題目以載入 PDF<br>Please select a question to load PDF"; // 同上
   }
 }
 
