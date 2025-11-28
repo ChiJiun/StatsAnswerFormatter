@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       : clsInp.value.trim();
   }
   function metaValid() {
-    return getClsValue() && nameInp.value && /^\d+$/.test(sidInp.value);
+    return getExamTitleValue() && getClsValue() && nameInp.value && /^\d+$/.test(sidInp.value);
   }
 
   function autoSave(e) {
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       downloadBtn.disabled = true;
       status.textContent =
-        "請填寫班級／姓名／學號，才可下載。 Please fill in your class, name, and student ID before downloading.";
+        "請填寫題目／班級／姓名／學號，才可下載。 Please fill in your question title, class, name, and student ID before downloading.";
     }
   }
 
