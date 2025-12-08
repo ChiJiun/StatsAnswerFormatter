@@ -7,7 +7,7 @@ const pdfMapping = {
   "Four-Step_Simulation of random guessing":
     "questions/Four-Step_Simulation.pdf",
   "Four-Step_Proportion_App or in-store": "questions/Four-Step_Proportion.pdf",
-  "Four-Step_Proportion Mean": "questions/Four-Step_Proportion Mean.pdf",
+  "Four-Step_Proportion Mean": "questions/Four-Step_Proportion_Mean.pdf",
 };
 
 // 根據選單載入 PDF（使用 iframe）
