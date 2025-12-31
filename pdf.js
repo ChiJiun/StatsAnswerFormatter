@@ -8,7 +8,8 @@ const pdfMapping = {
     "questions/Four-Step_Simulation.pdf",
   "Four-Step_Proportion_App or in-store": "questions/Four-Step_Proportion.pdf",
   "Four-Step_Population Mean": "questions/Four-Step_Population_Mean.pdf",
-  //"Four-step_Final": "questions/Four-step_Final.pdf",  
+  "Four-step_Final": "questions/Four-step_Final.pdf", 
+  "Four-step_Proportion Test": "questions/Four-Step_Proportion_Test.pdf",
 };
 
 // 根據選單載入 PDF（使用 iframe）
