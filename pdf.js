@@ -3,13 +3,14 @@ const pdfMapping = {
   "Typing Practice": "questions/Typing_Practice.pdf",
   "SOCS_S-M ratio": "questions/SOCS_S-M_ratio.pdf",
   "SOCS_S-M ratio-2": "questions/SOCS_S-M_ratio.pdf",
-  SOCS_Midterm: "questions/SOCS_S-M_ratio.pdf",
-  "Four-Step_Simulation of random guessing":
+  "SOCS_Midterm": "questions/SOCS_S-M_ratio.pdf",
+  "Four-Step_Simulation_random guessing":
     "questions/Four-Step_Simulation.pdf",
   "Four-Step_Proportion_App or in-store": "questions/Four-Step_Proportion.pdf",
-  "Four-Step_Population Mean": "questions/Four-Step_Population_Mean.pdf",
-  "Four-step_Final": "questions/Four-step_Final.pdf", 
-  "Four-step_Proportion Test": "questions/Four-Step_Proportion_Test.pdf",
+  "Four-Step_Population Mean": "questions/Four-Step_Population Mean.pdf",
+  "Four-Step_Final": "questions/Four-step_Final.pdf", 
+  "Four-Step_Proportion Test": "questions/Four-Step_Proportion Test.pdf",
+  "FRQ_Confidence Interval": "questions/FRQ_Confidence Interval.pdf",
 };
 
 // 根據選單載入 PDF（使用 iframe）
