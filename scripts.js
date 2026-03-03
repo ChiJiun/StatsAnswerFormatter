@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const blob = new Blob([htmlContent], { type: "text/html" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = `${cls}_${sid}_${name}.html`;
+    link.download = `${cls}_${sid}_${name}_${examTitle}.html`;
     link.click();
   });
 
