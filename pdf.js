@@ -10,7 +10,8 @@ const pdfMapping = {
   "Four-Step_Population Mean": "questions/Four-Step_Population Mean.pdf",
   "Four-Step_Final": "questions/Four-step_Final.pdf", 
   "Four-Step_Proportion Test": "questions/Four-Step_Proportion Test.pdf",
-  "FRQ_Confidence Interval": "questions/FRQ_Confidence Interval.pdf",
+  "FRQ_Confidence Interval for Proportion_CB": "questions/FRQ_Confidence Interval for Proportion_CB.pdf",
+  "FRQ_Ch6_CI for P": "questions/FRQ_Ch6_CI for P.pdf"
 };
 
 // 根據選單載入 PDF（使用 iframe）
