@@ -30,9 +30,12 @@
 
       <!-- PDF 顯示區域 -->
       <div class="pdf-viewer" style="margin-bottom: 2rem; border: 1px solid #ccc; padding: 1rem;">
-  <div id="pdf-status">請選擇題目以載入 PDF Please select a question to load PDF</div>
-  <iframe id="pdf-iframe" style="width: 100%; height: 600px; border: none; display: none;"></iframe>
-</div>
+        <div id="pdf-status">請選擇題目以載入 PDF Please select a question to load PDF</div>
+        <div style="position: relative; width: 100%; height: 600px; display: none;" id="pdf-wrapper">
+          <iframe id="pdf-iframe" style="width: 100%; height: 600px; border: none; display: none;"></iframe>
+          <div id="pdf-mask" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: none;" oncontextmenu="return false;"></div>
+        </div>
+      </div>
 
       <!-- 班級（下拉 + 可輸入 other） -->
       <div class="field">
@@ -63,8 +66,8 @@
       </div>
 
       <div class="actions" style="margin-top:2rem;">
-  <button id="instructionsBtn">作答注意事項 Answering Guidelines</button>
-  <button id="downloadExamBtn" disabled>下載考卷（含答案） Download Test Paper (with Solutions)</button>
+        <button id="instructionsBtn">作答注意事項 Answering Guidelines</button>
+        <button id="downloadExamBtn" disabled>下載考卷（含答案） Download Test Paper (with Solutions)</button>
       </div>
       <div class="status" id="status">尚未儲存 Unsaved</div>
 
