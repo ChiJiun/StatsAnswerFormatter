@@ -10,7 +10,8 @@ const pdfMapping = {
   "Four-Step_Final": "questions/Four-step_Final.pdf", 
   "Four-Step_Proportion Test": "questions/Four-Step_Proportion Test.pdf",
   "FRQ_Confidence Interval for Proportion_CB": "questions/FRQ_Confidence Interval for Proportion_CB.pdf#toolbar=0",
-  "FRQ_Ch6_CI for P": "questions/FRQ_Ch6_CI for P.pdf"
+  "FRQ_Ch6_CI for P": "questions/FRQ_Ch6_CI for P.pdf",
+  "Four-Step_T Test": "questions/Four-Step_T Test.pdf"
 };
 
 // 把需要隱藏下載鍵並加上遮罩的「題目名稱」寫在這裡
