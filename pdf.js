@@ -12,7 +12,8 @@ const pdfMapping = {
   "FRQ_Confidence Interval for Proportion_CB": "questions/FRQ_Confidence Interval for Proportion_CB.pdf#toolbar=0",
   "FRQ_Ch6_CI for P": "questions/FRQ_Ch6_CI for P.pdf",
   "Four-Step_T Test": "questions/Four-Step_T Test.pdf",
-  "Four-Step_Difference in population proportion": "questions/Four-Step_Difference in population proportion.pdf"
+  "Four-Step_Difference in population proportion": "questions/Four-Step_Difference in population proportion.pdf",
+  "National Central University": "questions/National Central University.pdf"
 };
 
 // 把需要隱藏下載鍵並加上遮罩的「題目名稱」寫在這裡
