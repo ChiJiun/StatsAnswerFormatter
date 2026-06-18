@@ -16,7 +16,7 @@ const pdfMapping = {
   "Four-Step_Midterm_2 Sample F-Test for Equal Population Variances": "questions/Four-Step_Midterm_2 Sample F-Test for Equal Population Variances.pdf",
   "Four-Step_1-Sample Chi squared Test for GOF": "questions/Four-Step_1-Sample Chi squared Test for GOF.pdf",
   "Four-Step_Chi-square Test for Independence": "questions/Four-Step_Chi-square Test for Independence.pdf",
-  "National Central University 2": "questions/National Central University 2.pdf"
+  "Final Exam": "questions/Final Exam.pdf"
 };
 
 // 把需要隱藏下載鍵並加上遮罩的「題目名稱」寫在這裡
