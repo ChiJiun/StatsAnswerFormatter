@@ -18,7 +18,8 @@ const pdfMapping = {
   "Four-Step_Chi-square Test for Independence": "questions/Four-Step_Chi-square Test for Independence.pdf",
   "Final Exam": "questions/Final Exam.pdf",
   "Handwriting to Text Practice": "questions/Handwriting to Text Practice.pdf",
-  "DFSO_Business_FRQ": "questions/DFSO_Business_FRQ.pdf"
+  "DFSO_Business_FRQ": "questions/DFSO_Business_FRQ.pdf",
+  "DFSO_Demand_FRQ": "questions/DFSO_Demand_FRQ.pdf"
 };
 
 // 把需要隱藏下載鍵並加上遮罩的「題目名稱」寫在這裡
