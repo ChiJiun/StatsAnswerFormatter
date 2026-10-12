@@ -19,7 +19,8 @@ const pdfMapping = {
   "Final Exam": "questions/Final Exam.pdf",
   "Handwriting to Text Practice": "questions/Handwriting to Text Practice.pdf",
   "DFSO_Business_FRQ": "questions/DFSO_Business_FRQ.pdf",
-  "DFSO_Demand_FRQ": "questions/DFSO_Demand_FRQ.pdf"
+  "DFSO_Demand_FRQ": "questions/DFSO_Demand_FRQ.pdf",
+  "SOCS_Comparison_Practice 1st": "questions/SOCS_Comparison_Practice 1st.pdf"
 };
 
 // 把需要隱藏下載鍵並加上遮罩的「題目名稱」寫在這裡
