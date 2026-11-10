@@ -25,7 +25,11 @@ const pdfMapping = {
   "5.4-PROP-Practice 1-Round 1": "questions/5.4-PROP-Practice 1-Round 1.pdf",
   "5.4-PROP-Practice 1-Round 2": "questions/5.4-PROP-Practice 1-Round 2.pdf",
   "5.3-MEAN-Practice 1-Round 1": "questions/5.3-MEAN-Practice 1-Round 1.pdf",
-  "5.3-MEAN-Practice 1-Round 2": "questions/5.3-MEAN-Practice 1-Round 2.pdf"
+  "5.3-MEAN-Practice 1-Round 2": "questions/5.3-MEAN-Practice 1-Round 2.pdf",
+  "5.4-PROP-Practice 2-Round 1": "questions/5.4-PROP-Practice 2-Round 1.pdf",
+  "5.4-PROP-Practice 2-Round 2": "questions/5.4-PROP-Practice 2-Round 2.pdf",
+  "5.3-MEAN-Practice 2-Round 1": "questions/5.3-MEAN-Practice 2-Round 1.pdf",
+  "5.3-MEAN-Practice 2-Round 2": "questions/5.3-MEAN-Practice 2-Round 2.pdf"
 };
 
 // 把需要隱藏下載鍵並加上遮罩的「題目名稱」寫在這裡
